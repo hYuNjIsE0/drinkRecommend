@@ -3,8 +3,18 @@
 <head>
     <title>음료추천 챗봇 - 주변 카페 탐색</title>
     <meta charset="UTF-8">
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=cc5df4d8c60a986599c2e641dcc3eacd&libraries=services,clusterer,drawing"></script>
 </head>
+
 <body>
     <h1> 주변 카페 탐색 </h1>
+    <div id="map" style="width:500px;height:400px;"></div>
+    <script>
+    var container = document.getElementById('map');
+    var options = {
+      center: new kakao.maps.LatLng(33,450701, 126.570667),
+      level: 3
+    }
+    var map = new kakao.maps.Map(container, options);
 </body>
 </html>
